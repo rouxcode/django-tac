@@ -1,0 +1,22 @@
+<!DOCTYPE html>{% load static i18n sekizai_tags compress cms_tags menu_tags tac_tags %}
+<html lang="{{ request.LANGUAGE_CODE }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="{% page_attribute meta_description %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% page_attribute "page_title" %}</title>
+        {% render_block 'css' %}{% render_block 'js' %}
+    </head>
+    <body>{% cms_toolbar %}
+        <div id="body" class="body}">
+            {% block body %}
+                {% placeholder 'body' %}
+            {% endblock %}
+        </div>
+        {% tac_popup %}
+        {% compress js %}
+            <script src="{{ STATIC_URL }}js/jquery.js"></script>
+            <script src="{{ STATIC_URL }}tac/js/tac.accept.js"></script>
+        {% endcompress %}
+    </body>
+</html>
