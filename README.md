@@ -9,6 +9,8 @@ $ pip install -e git+https://github.com/rouxcode/django-tac@0.0.3#egg=django-tac
 ```  
 
 ## Usage  
+
+### basics
 add tac to your installed apps:  
 ```python
 INSTALLED_APPS = (
@@ -36,7 +38,8 @@ use the template tag:
 {% tac_popup %}
 ```
 
-if desired js (jquery needs to be loaded before):  
+### javascript  
+jquery needs to be loaded before:  
 ```html
 <script src="{{ STATIC_URL }}tac/js/tac.accept.js"></script>
 ```
