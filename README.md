@@ -40,3 +40,13 @@ if desired js (jquery needs to be loaded before):
 ```html
 <script src="{{ STATIC_URL }}tac/js/tac.accept.js"></script>
 ```
+project urls.py  
+```python
+urlpatterns = [
+    url(
+        r'^tac/',
+        include('tac.urls')
+    )
+    '...'
+]
+```
