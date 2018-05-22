@@ -11,9 +11,7 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-        ('cms', '0016_auto_20160608_1535'),
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
