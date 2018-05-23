@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from setuptools import setup, find_packages
-from admin_sort import __version__
+from tac import __version__
 
 try:
     from pypandoc import convert
