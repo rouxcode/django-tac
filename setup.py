@@ -31,7 +31,7 @@ setup(
     author='Alaric Mägerle',
     author_email='info@rouxcode.ch',
     description=DESCRIPTION,
-    long_description=convert('README.md', 'rst', format='md'),
+    long_description=convert('README.md', 'rst'),
     url='https://github.com/rouxcode/django-tac',
     license='MIT',
     keywords=['django'],
