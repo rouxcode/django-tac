@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'testproject',
     'tac',
     'compressor',
-    'text_ckeditor',
+    # 'text_ckeditor',
 
     'django.contrib.redirects',
     'django.contrib.admin',

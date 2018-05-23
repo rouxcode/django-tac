@@ -35,3 +35,8 @@ def tac_popup(context):
         'url': './?tac=accepted',
         'apiurl': reverse('tac-api-accept'),
     }
+
+
+@register.inclusion_tag('tac/tags/popup_no_ckeditor.html', takes_context=True)
+def tac_popup_no_ckeditor(context):
+    return tac_popup(context)

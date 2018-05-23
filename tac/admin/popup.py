@@ -3,7 +3,10 @@ from __future__ import unicode_literals
 from django import forms
 from django.contrib import admin
 
-from text_ckeditor.widgets import CKEditorWidget
+try:
+    from text_ckeditor.widgets import CKEditorWidget
+except Exception:
+    from .widgets import CKEditorWidget
 
 from .. import conf
 from ..models import PopupContent

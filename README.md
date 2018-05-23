@@ -5,7 +5,7 @@ Simple terms and condition notify app
 
 ## Install  
 ```shell
-$ pip install -e git+https://github.com/rouxcode/django-tac@0.0.6#egg=django-tac  
+$ pip install -e git+https://github.com/rouxcode/django-tac@0.0.7#egg=django-tac  
 ```  
 
 ## Usage  
@@ -38,6 +38,10 @@ or create at least one popupcontent entry
 use the template tag:
 ```html
 {% tac_popup %}
+```
+or if rouxcode/django-text-ckeditor is not installed
+```html
+{% tac_popup_no_ckeditor %}
 ```
 
 ### javascript  
