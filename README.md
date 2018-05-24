@@ -37,6 +37,7 @@ or create at least one popupcontent entry
 
 use the template tag:
 ```html
+{% load tac_tags %}
 {% tac_popup %}
 ```
 or if rouxcode/django-text-ckeditor is not installed
