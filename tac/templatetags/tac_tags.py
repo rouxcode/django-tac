@@ -3,7 +3,10 @@ from __future__ import unicode_literals
 from django import template
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
-from django.urls import reverse
+try:
+    from django.urls import reverse
+except Exception:
+    from django.core.urlresolvers import reverse
 from django.utils.translation import get_language
 
 from .. import conf
