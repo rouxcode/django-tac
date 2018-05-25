@@ -5,7 +5,7 @@ Simple terms and condition notify app
 
 ## Install  
 ```shell
-$ pip install -e git+https://github.com/rouxcode/django-tac@0.1.0#egg=django-tac  
+$ pip install -e git+https://github.com/rouxcode/django-tac@0.1.1#egg=django-tac  
 ```  
 
 ## Usage  
@@ -20,11 +20,22 @@ INSTALLED_APPS = (
 ```  
 
 add the middleware:  
+
+django >= 1.10:  
 ```python
 MIDDLEWARE = [
     '...',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'tac.middleware.TACMiddleware',
+    '...'
+]
+````
+django <= 1.9.x
+```python
+MIDDLEWARE_CLASSES = [
+    '...',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'tac.middleware.TACMiddlewareLegacy',
     '...'
 ]
 ````
