@@ -13,6 +13,11 @@ class PopupContent(models.Model):
         max_length=150,
         verbose_name=_('Name'),
     )
+    site = models.ForeignKey(
+        'sites.Site',
+        default=1,
+        verbose_name=_('Site'),
+    )
     language = models.CharField(
         max_length=10,
         choices=conf.LANGUAGES,

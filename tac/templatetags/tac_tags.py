@@ -19,11 +19,19 @@ def tac_popup(context):
     if session.get(conf.TAC_ACCEPTED_SESSION_KEY):
         return {'show': False}
     language = get_language()
-    qs = PopupContent.objects.filter(language=language)
+    qs = PopupContent.objects.filter(
+        site_id=settings.SITE_ID,
+        language=language,
+    )
     if qs.count() < 0:
-        qs = PopupContent.objects.filter(language=settings.LANGUAGE_CODE)
+        qs = PopupContent.objects.filter(
+            site_id=settings.SITE_ID,
+            language=settings.LANGUAGE_CODE,
+        )
     if qs.count() < 0:
-        qs = PopupContent.objects.all()
+        qs = PopupContent.objects.filter(
+            site_id=settings.SITE_ID
+        )
     if qs.count() < 0:
         raise ImproperlyConfigured(
             'no popup content in db, please load fixture\n'
