@@ -9,8 +9,6 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('sites', '0002_alter_domain_unique'),
-        ('tac', '0001_initial'),
     ]
 
     operations = [
