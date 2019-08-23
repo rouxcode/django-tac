@@ -16,6 +16,7 @@ class PopupContent(models.Model):
     site = models.ForeignKey(
         'sites.Site',
         default=1,
+        on_delete=models.CASCADE,
         verbose_name=_('Site'),
     )
     language = models.CharField(
