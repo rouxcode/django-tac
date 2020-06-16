@@ -1,17 +1,23 @@
 from __future__ import unicode_literals
 
+from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 
 
 TAC_ACCEPTED_SESSION_KEY = 'tac_accepted'
 
-LANGUAGES = [
-    ('de', 'De'),
-    ('en', 'En'),
-    ('fr', 'Fr'),
-    ('it', 'It'),
-    ('es', 'Es'),
-]
+LANGUAGES = getattr(
+    settings,
+    'LANGUAGES',
+    [
+        ('de', 'De'),
+        ('en', 'En'),
+        ('fr', 'Fr'),
+        ('it', 'It'),
+        ('es', 'Es'),
+    ]
+)
+
 
 CKEDITOR_CONF = {
     'height': 100,
