@@ -8,7 +8,7 @@ TAC_ACCEPTED_SESSION_KEY = 'tac_accepted'
 
 LANGUAGES = getattr(
     settings,
-    'TAC_LANGUAGES',
+    'LANGUAGES',
     [
         ('de', 'De'),
         ('en', 'En'),
