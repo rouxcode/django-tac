@@ -18,6 +18,7 @@ LANGUAGES = getattr(
     ]
 )
 
+
 CKEDITOR_CONF = {
     'height': 100,
     'width': '100%',
