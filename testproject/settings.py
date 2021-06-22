@@ -14,9 +14,9 @@ LANGUAGES = [
 ]
 
 APP_ROOT = os.path.abspath(os.path.join(
-        os.path.dirname(__file__),
-        "..",
-    )
+    os.path.dirname(__file__),
+    "..",
+)
 )
 PROJECT_ROOT = os.path.abspath(
     os.path.join(
@@ -24,6 +24,7 @@ PROJECT_ROOT = os.path.abspath(
         '..',
     )
 )
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 sys.path.insert(0, APP_ROOT + "/../")
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'storage', 'media')
@@ -108,10 +109,10 @@ TEMPLATES = [
 ]
 
 AUTH_PASSWORD_VALIDATORS = [
-    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'}, # NOQA
-    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'}, # NOQA
-    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'}, # NOQA
-    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'}, # NOQA
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},  # NOQA
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},  # NOQA
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},  # NOQA
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},  # NOQA
 ]
 
 # =============================================================================

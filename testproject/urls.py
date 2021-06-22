@@ -1,6 +1,4 @@
-from __future__ import unicode_literals
-
-from django.conf.urls import include, url
+from django.urls import include, path
 
 from django.conf.urls.i18n import i18n_patterns
 from django.conf import settings
@@ -12,20 +10,20 @@ admin.autodiscover()
 
 # SIMPLE PATTERNS
 urlpatterns = [
-    url(
-        r'^tac/',
+    path(
+        'tac/',
         include('tac.urls')
     )
 ]
 
 # i18n PATTERNS
 urlpatterns += i18n_patterns(
-    url(
-        r'^admin/',
-        include(admin.site.urls)
+    path(
+        'admin/',
+        admin.site.urls
     ),
-    url(
-        r'^',
+    path(
+        '',
         include('cms.urls')
     ),
 )

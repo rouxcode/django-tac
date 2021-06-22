@@ -1,13 +1,13 @@
-from __future__ import unicode_literals
 
-from django.conf.urls import url
+
+from django.urls import path
 
 from .views import AcceptTacView
 
 
 urlpatterns = [
-    url(
-        r'^api-accept/$',
+    path(
+        'api-accept/',
         AcceptTacView.as_view(),
         name='tac-api-accept'
     ),

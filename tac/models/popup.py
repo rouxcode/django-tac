@@ -1,14 +1,9 @@
-from __future__ import unicode_literals
-
 from django.db import models
-from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 
-from .. import conf
 
-
-@python_2_unicode_compatible
 class PopupContent(models.Model):
+
     name = models.CharField(
         max_length=150,
         verbose_name=_('Name'),
@@ -21,7 +16,7 @@ class PopupContent(models.Model):
     )
     language = models.CharField(
         max_length=10,
-        choices=conf.LANGUAGES,
+        default='de',
         verbose_name=_('Language'),
     )
     text = models.TextField(

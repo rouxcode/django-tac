@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 from django import forms
 from django.contrib import admin
 
@@ -18,7 +16,8 @@ class PopupContentAdminForm(forms.ModelForm):
         fields = '__all__'
         model = PopupContent
         widgets = {
-            'text': CKEditorWidget(conf.CKEDITOR_CONF)
+            'text': CKEditorWidget(conf.CKEDITOR_CONF),
+            'language': forms.Select(choices=conf.LANGUAGES)
         }
 
 
