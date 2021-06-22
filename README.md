@@ -5,7 +5,7 @@ Simple terms and condition notify app
 
 ## Install  
 ```shell
-$ pip install -e git+https://github.com/rouxcode/django-tac@0.1.5#egg=django-tac  
+$ pip install -e git+https://github.com/rouxcode/django-tac@master#egg=django-tac  
 ```  
 
 ## Usage  
