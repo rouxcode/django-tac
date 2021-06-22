@@ -20,8 +20,6 @@ INSTALLED_APPS = (
 ```  
 
 add the middleware:  
-
-django >= 1.10:  
 ```python
 MIDDLEWARE = [
     '...',
@@ -29,16 +27,6 @@ MIDDLEWARE = [
     'tac.middleware.TACMiddleware',
     '...'
 ]
-````
-django <= 1.9.x
-```python
-MIDDLEWARE_CLASSES = [
-    '...',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'tac.middleware.TACMiddlewareLegacy',
-    '...'
-]
-````
 
 if desired load initial data  
 ```shell
@@ -64,8 +52,8 @@ jquery needs to be loaded before:
 project urls.py  
 ```python
 urlpatterns = [
-    url(
-        r'^tac/',
+    path(
+        'tac/',
         include('tac.urls')
     )
     '...'
