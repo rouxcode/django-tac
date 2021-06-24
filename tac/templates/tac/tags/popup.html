@@ -1,4 +1,4 @@
 {% if show %}<div class="tac-popup">{% load text_ckeditor_filters %}
     <div class="tac-popup-text">{{ object.text|text_ckeditor_render }}</div>
-    <a class="tac-popup-button" href="{{ url }}" data-apiurl="{{ apiurl }}">{{ object.get_button_label }}</a>
+    <a class="tac-popup-button" href="{{ href_url }}" data-api="{{ api_url }}">{{ object.get_button_label }}</a>
 </div>{% endif %}

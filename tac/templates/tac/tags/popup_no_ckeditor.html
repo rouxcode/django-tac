@@ -1,4 +1,4 @@
 {% if show %}<div class="tac-popup tac-popup-no-ckeditor">
     <div class="tac-popup-text">{{ object.text|safe }}</div>
-    <a class="tac-popup-button" href="{{ url }}" data-apiurl="{{ apiurl }}">{{ object.get_button_label }}</a>
+    <a class="tac-popup-button" href="{{ href_url }}" data-api="{{ api_url }}">{{ object.get_button_label }}</a>
 </div>{% endif %}

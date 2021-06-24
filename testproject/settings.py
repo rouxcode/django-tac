@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'tac',
     'compressor',
     'text_ckeditor',
+    'text_ckeditor.text_ckeditor_links',
 
     'django.contrib.redirects',
     'django.contrib.admin',
@@ -57,6 +58,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
 
     # CMS
+
     'cms',
     'menus',
     'sekizai',
@@ -128,7 +130,7 @@ CMS_TEMPLATES = (
 # GENERAL CMS Settings
 # =============================================================================
 
-TEXT_CKEDITOR_LINK_MODEL = 'tac.PopupLink'
+TEXT_CKEDITOR_LINK_MODEL = 'text_ckeditor_links.Link'
 
 
 CMS_MENU_DEBUG = False  # Prints out menu nodes and their properties

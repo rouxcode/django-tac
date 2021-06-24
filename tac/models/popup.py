@@ -43,8 +43,5 @@ class PopupContent(models.Model):
         return '{}'.format(label)
 
     def get_admin_title(self):
-        return '{}: {}'.format(
-            self.get_language_display(),
-            self.name,
-        )
+        return '{}: {}'.format(self.language, self.name)
     get_admin_title.short_description = _('Title')

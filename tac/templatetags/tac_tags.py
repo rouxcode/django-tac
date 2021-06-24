@@ -43,8 +43,8 @@ def tac_popup(context):
     return {
         'object': qs.first(),
         'show': True,
-        'url': './?tac=accepted',
-        'apiurl': reverse('tac-api-accept'),
+        'href_url': './?tac=accepted',
+        'api_url': reverse('tac-api-accept'),
     }
 
 
